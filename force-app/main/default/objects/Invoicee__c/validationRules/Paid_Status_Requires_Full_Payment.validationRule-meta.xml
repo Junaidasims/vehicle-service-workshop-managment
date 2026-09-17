@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Paid_Status_Requires_Full_Payment</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Invoice_Status__c, &quot;Paid&quot;),
+    Amount_Paid__c &lt; Total_Amount__c
+)</errorConditionFormula>
+    <errorDisplayField>Invoice_Status__c</errorDisplayField>
+    <errorMessage>Invoice cannot be marked Paid until the full amount is received</errorMessage>
+</ValidationRule>

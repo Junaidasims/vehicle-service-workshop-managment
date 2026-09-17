@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Discount__c</fullName>
+    <label>Total Discount</label>
+    <summarizedField>Service_Itemm__c.Discount_Amount__c</summarizedField>
+    <summaryForeignKey>Service_Itemm__c.Service_Orderr__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Make_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Make__c, &quot;Other&quot;),
+    ISBLANK(Other_Make__c)
+)</errorConditionFormula>
+    <errorDisplayField>Other_Make__c</errorDisplayField>
+    <errorMessage>Please enter the Other Make.</errorMessage>
+</ValidationRule>

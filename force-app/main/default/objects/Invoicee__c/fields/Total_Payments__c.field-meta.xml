@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Payments__c</fullName>
+    <label>Total Payments</label>
+    <summarizedField>Paymentt__c.Payment_Amount__c</summarizedField>
+    <summaryForeignKey>Paymentt__c.Invoicee__c</summaryForeignKey>
+    <summaryFilterItems>
+        <field>Paymentt__c.Payment_Status__c</field>
+        <operation>equals</operation>
+        <value>Completed</value>
+    </summaryFilterItems>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

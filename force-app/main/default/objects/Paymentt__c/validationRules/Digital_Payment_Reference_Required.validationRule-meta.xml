@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Digital_Payment_Reference_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        ISPICKVAL(Payment_Method__c, &quot;UPI&quot;),
+        ISPICKVAL(Payment_Method__c, &quot;Credit Card&quot;),
+        ISPICKVAL(Payment_Method__c, &quot;Debit Card&quot;),
+        ISPICKVAL(Payment_Method__c, &quot;Bank Transfer&quot;)
+    ),
+    ISBLANK(Transaction_Reference__c)
+)</errorConditionFormula>
+    <errorDisplayField>Transaction_Reference__c</errorDisplayField>
+    <errorMessage>Transaction Reference is required for digital payments</errorMessage>
+</ValidationRule>

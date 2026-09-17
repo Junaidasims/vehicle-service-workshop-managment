@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Part_Inventory_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Item_Type__c, &quot;Part&quot;),
+    ISBLANK(Inventory_Itemm__c)
+)</errorConditionFormula>
+    <errorDisplayField>Inventory_Itemm__c</errorDisplayField>
+    <errorMessage>Please select an inventory item for a part</errorMessage>
+</ValidationRule>
